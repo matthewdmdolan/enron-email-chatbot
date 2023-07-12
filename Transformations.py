@@ -1,32 +1,11 @@
+import os
 import re
-import magic
-from email import message_from_string
-import pandas as pd
-import os
-import docx2txt
-import matplotlib.pyplot as plt
-import pandas as pd
-import os
 import time
+from email import message_from_string
+import pandas as pd
 import seaborn as sns
-import os
-from PyPDF4 import PdfFileReader
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import nltk
-from email import message_from_string
-import pandas as pd
-# this function loops through th
-from PyPDF4 import PdfFileReader
-from email import message_from_string
-import pandas as pd
-import os
 
-# Loading
+# Loading output from
 df = pd.DataFrame()
 df = pd.read_csv('email_data.csv')
 
@@ -100,24 +79,14 @@ dir_path = "/Users/mattdolan/Downloads/maildir"
 above_median_sentiment_analysis = fetch_data(dir_path, above_sample)
 below_median_sentiment_analysis = fetch_data(dir_path, below_sample)
 
+#write to csv
+above_median_sentiment_analysis.to_csv('above_median_sentiment_analysis.csv', index=False)
+below_median_sentiment_analysis.csv('below_median_sentiment_analysis', index=False)
+
 # print(above_median_sentiment_analysis.head())
 # print(below_median_sentiment_analysis.heaD())
 
-# Sentiment Analysis
-sia = SentimentIntensityAnalyzer()
 
-# Apply sentiment analysis on email body
-above_sample['sentiment'] = above_sample['EmailBody'].apply(lambda x: sia.polarity_scores(x))
-below_sample['sentiment'] = below_sample['EmailBody'].apply(lambda x: sia.polarity_scores(x))
-#
-# # Extract compound score
-# above_sample['compound'] = above_sample['sentiment'].apply(lambda score_dict: score_dict['compound'])
-# below_sample['compound'] = below_sample['sentiment'].apply(lambda score_dict: score_dict['compound'])
-#
-# # Now you have two samples you can compare for sentiment analysis
-#
-#
-#
 #
 #
 #

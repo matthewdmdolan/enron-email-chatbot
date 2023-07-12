@@ -2,6 +2,7 @@ import os
 import time
 import pandas as pd
 
+#looping through all 500k emails to identify metadata on files so we can begin our eda
 def fetch_data(dir_path):
     data = {'directory': [], 'file_name': [], 'file_size': [], 'file_date': []}
     for dirpath, dirnames, filenames in os.walk(dir_path):
