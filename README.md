@@ -22,7 +22,7 @@ There are undoubtedbly limitations to utilising a dataset that was derived from 
 - Racial slurs and Pornography are common
 - Around half of the emails are only one sentence long.
 
-source: https://www.newyorker.com/magazine/2017/07/24/what-the-enron-e-mails-say-about-us
+Source: https://www.newyorker.com/magazine/2017/07/24/what-the-enron-e-mails-say-about-us
 
 The email length is less of an issue for our analysis, and pornography is less of a concern due to the fact we are only analysing the text data and not any attachments. However, the racial slurs are a big issue if this chat bot was to be operationalised. Racial biases in the training of AI models is a hotly contested issue and something we should combat so I will be researching how we can reduce these biases in the development of the model. For further reading on biases in the application of AI Models I highy recommend are Weapons of Math Destruction by Cathy O'Neil. 
 
